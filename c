@@ -124,10 +124,19 @@ fi
 comp+=("$CPPFLAGS")
 
 # hash all of our data
-prehash="$CC ${comp[*]}" # compiler + flags and files
+prehash=
+argprehash="$CC"
 for f in "${comp[@]}"; do
-    [ -f "$f" ] && prehash+="$f $(cpp "$f" 2>&1)"
+if [ -f "$f" ]; then
+        prehash+=$($hash_func < "$f" | cut -d' ' -f1 2>&1)
+    else
+        # Skip any empty args resulting from extra spaces
+        [ "$f" == "" ] && continue
+        argprehash+="$f"
+    fi
 done
+
+prehash+=$($hash_func <<< "$argprehash" | cut -d' ' -f1 2>&1)
 
 # hash everything into one unique identifier, for caching purposes
 id="c$("$hash_func" <<< "$prehash" | cut -d' ' -f1)"
