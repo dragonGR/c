@@ -1,8 +1,4 @@
-# c
-
-<!--
-[![Build Status](https://travis-ci.org/ryanmjacobs/c.svg)](https://travis-ci.org/ryanmjacobs/c)
--->
+[![Build Status](https://travis-ci.org/dragonGR/c.svg)](https://travis-ci.org/dragonGR/c)
 
 > "There isn't much that's special about C. That's one of the reasons why it's
 fast."
@@ -53,7 +49,7 @@ Use a package manager? [Check here](https://github.com/ryanmjacobs/c#packages).
 
 For the entire system:
 ```bash
-$ wget https://raw.githubusercontent.com/ryanmjacobs/c/master/c
+$ wget https://raw.githubusercontent.com/dragonGR/c/master/c
 $ sudo install -m 755 c /usr/bin/c
 
 # Or... for systems that prefer /usr/local/bin (e.g. macOS)
@@ -62,7 +58,7 @@ $ sudo install -m 755 c /usr/local/bin/c
 
 For your local user only:
 ```bash
-$ wget https://raw.githubusercontent.com/ryanmjacobs/c/master/c
+$ wget https://raw.githubusercontent.com/dragonGR/c/master/c
 $ sudo install -Dm 755 c ~/.bin/c
 $ echo 'PATH=$PATH:$HOME/.bin' >> ~/.bashrc
 ```
@@ -165,14 +161,14 @@ Use a package manager? You've come to the right place.
 
 AUR: https://aur.archlinux.org/packages/c/<br>
 bpkg: `bpkg install ryanmjacobs/c`<br>
-brew: `brew install https://raw.githubusercontent.com/ryanmjacobs/c/master/c.rb`
+brew: `brew install https://raw.githubusercontent.com/dragonGR/c/master/c.rb`
 (shebang will be `#!/usr/local/bin/c`)<br>
 
 ## Todo
 ~~Maybe later we can implement caching.~~ Done!
 
 ## License
-[MIT License](https://raw.githubusercontent.com/ryanmjacobs/c/master/LICENSE).
+[MIT License](https://raw.githubusercontent.com/dragonGR/c/master/LICENSE).
 
 Basically, you can do whatever you want provided that you include
 the LICENSE notice in any copy of the source. Also, I am not liable
